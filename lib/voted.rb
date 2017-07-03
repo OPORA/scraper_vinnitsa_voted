@@ -7,7 +7,7 @@ class VoteEvent
   property :name,         Text
   property :number,       Integer
   property :rada_id,      Integer
-  property :date_caden,   String
+  property :date_caden,   Text
   property :date_vote,    DateTime
   property :date_created, Date
   property :option,       String
