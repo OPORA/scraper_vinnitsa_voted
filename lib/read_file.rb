@@ -13,6 +13,7 @@ class ReadFile
         next if row[/PD-OOS/]
         next if row[/PD-TOLS/]
         next if row[/Click to\.buy NOW!/]
+        next if row[/Click te\.buy NOW!/]
         str = row.strip.gsub(/\s{2,}/, ' ')
         next if str[/^Рішення ухвалює/]
         next if str == "СКЛАДУ"
