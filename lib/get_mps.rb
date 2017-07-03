@@ -33,6 +33,8 @@ class GetMp
       return 92
    elsif name == "Гройсман Борис Іакович" or name == "Гройсман Борис Ісакович"
       return 141
+   elsif name == "Моргунов Сергій Анатолійовичwwm"
+      return 1111
    end
    data = @data_hash.find {|k| k["full_name"] == name  }
    unless data.nil?
