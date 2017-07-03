@@ -11,6 +11,7 @@ class ReadFile
         next if row == ""
         next if row[/Прізвище, Ім'я, По-батькові/]
         next if row[/PD-OOS/]
+        next if row[/PD-TOLS/]
         next if row[/Click to\.buy NOW!/]
         str = row.strip.gsub(/\s{2,}/, ' ')
         next if str[/^Рішення ухвалює/]
