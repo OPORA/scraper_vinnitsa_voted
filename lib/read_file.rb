@@ -22,7 +22,7 @@ class ReadFile
           votes << {}
         end
         next if votes.empty?
-        if votes.last[:result].nil? and str[/ВСЬОГО ПРОГОЛОСУВАЛО:/]
+        if votes.last[:result].nil? and str[/(ВСЬОГО ПРОГОЛОСУВАЛО:|УСЬОГО ПРОГОЛОСУВАЛО:)/]
           votes.last[:result] = 1
         end
         if str[/^від.+/] and votes.last.empty?

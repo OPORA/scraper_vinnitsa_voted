@@ -16,9 +16,9 @@ class GetPages
   end
   def get_all_votes
     @all_page.each do |p|
-      next if p[:caden] == "Результати поіменного голосування 19 сесії  7 скликання.pdf"
-      next if p[:caden] == "Результати поіменного голосування 18 сесії  7 скликання.pdf"
-      next if p[:caden] == "Результати поіменного голосування 17 сесії  7 скликання.pdf"
+      # next if p[:caden] == "Результати поіменного голосування 19 сесії  7 скликання.pdf"
+      # next if p[:caden] == "Результати поіменного голосування 18 сесії  7 скликання.pdf"
+      # next if p[:caden] == "Результати поіменного голосування 17 сесії  7 скликання.pdf"
       p p[:caden]
       GetAllVotes.votes(p[:url], p[:caden])
     end
