@@ -6,7 +6,7 @@ class GetMp
   end
   def serch_mp(full_name)
     p full_name
-   name =full_name.gsub(/[[:upper:]]/){|s|" "+s}.split(' ').join(' ').gsub(/[[:space:]][[:lower:]]/){|s| s.gsub(/\s/,'')}
+   name =full_name.gsub(/[[:upper:]]/){|s|" "+s}.split(' ').join(' ').gsub(/[[:space:]][[:lower:]]/){|s| s.gsub(/\s/,'')}.gsub(/[a-zA-Z]/,'').gsub(/-$/,'')
 
     if name == "Базелюк Володимир Васильович"
       return 1001
