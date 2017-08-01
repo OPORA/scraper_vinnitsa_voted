@@ -20,7 +20,7 @@ class GetPages
       # next if p[:caden] == "Результати поіменного голосування 18 сесії  7 скликання.pdf"
       # next if p[:caden] == "Результати поіменного голосування 17 сесії  7 скликання.pdf"
       p p[:caden]
-      GetAllVotes.votes(p[:url], p[:caden])
+      GetAllVotes.votes(p[:url], p[:caden].gsub(/[[:blank:]]{2,}/, ' '))
     end
   end
 end
