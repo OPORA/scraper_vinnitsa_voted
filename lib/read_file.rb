@@ -30,7 +30,7 @@ class ReadFile
           votes.last[:result] = 1
         end
         if str[/^від.+/] and votes.last.empty?
-          votes.last[:datetime] = str[/^від.+/].gsub(/від/,'').strip
+          votes.last[:datetime] = str[/^від.+/].gsub(/^від/,'').strip.gsub(/(\.[[:blank:]]|[[:blank:]]\.)/, '.')
         elsif str[/(Питання №|Питання№|Пииання №)/]
           votes.last[:vote] = []
         elsif votes.last[:datetime] and votes.last[:vote].nil?
