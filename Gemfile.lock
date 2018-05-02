@@ -129,3 +129,6 @@ DEPENDENCIES
   rake
   sinatra
   sinatra-contrib
+
+BUNDLED WITH
+   1.15.4
